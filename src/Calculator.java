@@ -3,7 +3,7 @@ import java.awt.event.*;
 public class Calculator extends Frame implements ActionListener{
     TextField tf1,tf2,tf3;
     Button b1,b2,b3,b4,b5;
-    Label l;
+    Label l,l2,l3,l4;
 
     Calculator(){
         addWindowListener(new WindowAdapter(){
@@ -17,7 +17,14 @@ public class Calculator extends Frame implements ActionListener{
         tf1=new TextField();
         tf1.setBounds(50,50,150,20);
         tf2=new TextField();
+        l2 = new Label("Enter number 1");
+        l3 = new Label("Enter number 2");
+        l4 = new Label("Result");
+        l2.setBounds(50,30,150,20);
+        l3.setBounds(50,80,150,20);
+        l4.setBounds(50,130,150,20);
         tf2.setBounds(50,100,150,20);
+
         tf3=new TextField();
         tf3.setBounds(50,150,150,20);
         tf3.setEditable(false);
@@ -41,7 +48,7 @@ public class Calculator extends Frame implements ActionListener{
         b3.addActionListener(this);
         b4.addActionListener(this);
         b5.addActionListener(this);
-        add(tf1);add(tf2);add(tf3);add(b1);add(b2);add(b3);add(b4);add(b5);add(l);
+        add(tf1);add(tf2);add(tf3);add(b1);add(b2);add(b3);add(b4);add(b5);add(l);add(l2);add(l3);add(l4);
         setSize(500,300);
         setLayout(null);
         setVisible(true);
